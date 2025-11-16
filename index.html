@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeyad Ahmed - Academic Profile</title>
+    <title>Zeyad Ahmed</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <marquee behavior="right" scrollamount="10">
-            <h1>Welcome to Zeyad Ahmed (8yVice) personal page!</h1>
-        </marquee>
+        <h1>Welcome to Zeyad Ahmed (8yVice) personal page!</h1>
         <p class="subtitle">Computer Science Researcher • Software Engineer • Educator</p>
         <nav>
             <a href="#about">Home</a> |
@@ -20,15 +18,22 @@
         </nav>
     </header>
 
-    <div class="content">
+    <div id="content">
         <section id="about" class="box">
             <h2>> About</h2>
             <div class="profile">
                 <img src="assets/images/za_pic.jpg" alt="Profile Picture">
                 <div class="info">
-                    <p>I'm a second-year M.Sc. student, enthusiastic, self-taught computer science graduate and software engineer who loves building things from scratch, whether it’s a compiler, a tool, or a clever idea</p>
-                    <p>I’m deeply interested in systems programming, theoretical computer science, and low-level computing.My research interests are programming languages design, compiler construction, parallel computing, AI, and image processing.</p>
+                    <p>I'm a second-year M.Sc. student, enthusiastic, self-taught computer science graduate, teaching assistant, and software engineer who loves building things from scratch. I'm interested in <em>systems programming</em>, <em>theoretical computer science</em>, and <em>low-level computing</em>. 
+                    <p>My research interests are <em>programming languages design & theory</em>, <em>compiler construction</em>, <em>parallel computing</em>, <em>artificial intelligence</em>, and <em>image processing</em>.</p></p>
                     <p>Living with ADHD has shaped how I learn and think: I dive deep, follow curiosity wherever it leads, and often find joy in details others overlook.</p>
+                    
+                    <p>Email: <a href="#" onclick="copymail()">Click to copy</a></p>
+                    <p>
+                        <a href="https://scholar.google.com/citations?user=mql4kk8AAAAJ&hl=en" target="_blank"><i class="fa-brands fa-google"></i> Google Scholar</a> •
+                        <a href="https://github.com/EightyVice" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a> •
+                        <a href="https://www.linkedin.com/in/zeyad-ahmed-ali/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    </p>
                 </div>
             </div>
         </section>
@@ -36,8 +41,9 @@
         <section id="education" class="box">
             <h2>> Education</h2>
             <div class="time">
-                <img src="assets/images/aun_logo.png">
+                <img class="aun" src="assets/images/aun_logo.png">
                 <div class="details">
+                    <span class="year">2024-Present</span>
                     <p class="univ">Assiut University</p>
                     <p class="degree">M.Sc. in Computer Science</p>
                     <p class="college">Faculty of Computers and Information</p>
@@ -58,20 +64,23 @@
             </div>
 
             <div class="time">
-                <img src="assets/images/aun_logo.png">
+                <img class="aun" src="assets/images/aun_logo.png">
                 <div class="details">
+                    <span class="year">2020-2024</span>
                     <p class="univ">Assiut University</p>
                     <p class="degree">B.Sc. in Computer Science</p>
                     <p class="college">Faculty of Computers and Information</p>
                     <div class="info">
                         <ul>
-                            <li><white>Research Advisor:</white> <a href="https://engineering.buffalo.edu/home/research/faculty/new.host.html/content/shared/engineering/computer-science-engineering/profiles/faculty/teaching/mohammed-mostafa.detail.teaching.html">Dr. Mostafa Mohammed</a></li>
+                            <li><span class="white">Research Advisor:</span> <a href="https://engineering.buffalo.edu/home/research/faculty/new.host.html/content/shared/engineering/computer-science-engineering/profiles/faculty/teaching/mohammed-mostafa.detail.teaching.html">Dr. Mostafa Mohammed</a></li>
                             <li>
-                                <white>Capstone Project:</white> The Rhyme Programming Language
+                                <span class="white">Capstone Project:</span> The Rhyme Programming Language
                                 <ul>
                                     <li>
-                                        <white>Advised by:</white> <a href="https://scholar.google.com/citations?hl=en&user=wfznK1QAAAAJ">Dr. Ahmed Hosny Ibrahim</a><br>
-                                        <a>Code</a> | <a>Slides</a> | <a>Video</a>
+                                        <span class="white">Advised by:</span> <a href="https://scholar.google.com/citations?hl=en&user=wfznK1QAAAAJ">Dr. Ahmed Hosny Ibrahim</a><br>
+                                        <a href="https://github.com/rhyme-language/rhyme/">Code</a> |
+                                        <a href="https://docs.google.com/presentation/d/1XAfreR2kWSLsKanj9kaIy7O2MQKcD_F3X8CfXC71Rbo/edit?usp=sharing">Slides</a> |
+                                        <a href="https://www.linkedin.com/posts/zeyad-ahmed-ali_%D9%85%D9%86-%D8%A7%D9%88%D9%84-%D9%85%D8%A7-%D8%AF%D8%AE%D9%84%D8%AA-%D8%A7%D9%84%D9%83%D9%84%D9%8A%D8%A9-%D8%AD%D8%A8%D8%A7-%D9%81%D9%8A%D9%87%D8%A7-%D9%88-%D9%81%D9%8A-%D8%A7%D9%84computer-activity-7199470394666299392-WL9y?utm_source=share&utm_medium=member_desktop&rcm=ACoAADRMw3wBvdhxXnV9_1IPH5t1k0d3oL4GWnA">Video [Arabic]</a>
                                     </li>
                                 </ul>
                             </li>
@@ -81,46 +90,103 @@
             </div>
         </section>
 
+        <section id="experience" class="box">
+            <h2>> Experience</h2>
+            <div class="time">
+                <img class="bua" src="assets/images/bua.png">
+                <div class="details">
+                    <span class="year">Sep 2024 - Present</span>                    
+                    <p class="univ">Badr University in Assiut</p>
+                    <p class="degree">Teaching Assistant</p>
+                    <p class="college">School of Artificial Intelligence & Data Management</p>
+                    <div class="info">
+                        <ul>
+                            <li>
+                                Courses Taught:
+                                <ul>
+                                    <li>Software Engineering</li>
+                                    <li>Robotics</li>
+                                    <li>Computer Graphics</li>
+                                    <li>Computer Architecture</li>
+                                    <li>Calculus</li>
+                                    <li>Graph Theory</li>
+                                    <li>Linear Algebra</li>
+                                    <li>Project Management</li>
+                                    <li>Introduction to IT</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="time">
+                <img class="voy" src="assets/images/voyancehealth_logo.jpg">
+                <div class="details">
+                    <span class="year">May 2024 - Dec. 2024</span>                    
+                    <p class="univ">Voyance Health</p>
+                    <p class="degree">Software Engineer</p>
+                    <div class="info">
+                    Developed and maintained medical and veterinary software systems, with a focus on X-ray acquisition, image processing, and AI-driven applications such as VoyanceX, using technologies like C#, WPF, and React.
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="publications" class="box">
             <h2>> Publications</h2>
-            <ul>
-                <li>
-                    <b>Roro8:</b> A Fantasy Computer for Computer Architecture and Organization Education. SIGCSE TS 2024. 
-                    <a href="https://doi.org/10.1145/3626253.3635420">DOI</a>
-                </li>
-                <li>
-                    <b>CodeVisions:</b> Static Code Analysis for Creating Education-Oriented Applications. SIGCSE TS 2023. 
-                    <a href="https://doi.org/10.1145/3545947.3573276">DOI</a>
-                </li>
-            </ul>
+            <div class="publication">
+                <span class="year">2024</span>                    
+                <p class="title">Roro8: A Fantasy Computer for Computer Architecture and Organization Education</p>
+                <p class="authors"><auth>Zeyad Ahmed</auth></p>
+                <p class="venue">ACM SIGSE TS 2024</p>
+                <div class="desc">
+                    <p><a href="https://doi.org/10.1145/3545947.3573276">DOI</a> | <a href="https://www.researchgate.net/profile/Zeyad-Ahmed-10/publication/369114848_CodeVisions_Static_Code_Analysis_for_Creating_Education-Oriented_Applications/links/6414a12a315dfb4cce89d979/CodeVisions-Static-Code-Analysis-for-Creating-Education-Oriented-Applications.pdf">Paper</a></p>
+                    <details>
+                        <summary>Abstract</summary>
+                        <p>
+                            In Learning computer architecture and low-level programming is a complex challenge for beginners. We introduce Roro8, an 8-bit fantasy computer system designed to simplify the learning process while closely mirroring real-world computer systems. Roro8 comprises an 8-bit microprocessor (RX8), memory-mapped I/O, external peripherals, and an external display (RD6448). This unique feature enables students to become familiar with datasheets of devices, a fundamental aspect of hardware programming. The core pedagogical goal is to have students implement an emulator, simulators, assemblers, and compilers, providing a hands-on learning experience. They can create games or see their own programs running on the display, making abstract concepts tangible and engaging. Our work addresses the challenge of teaching computer architecture by offering a novel solution. Unlike conventional system-on-chip designs, Roro8 simplifies the learning process while emphasizing practical engagement. This paper outlines the problem, reviews related work, introduces Roro8, and underscores the significance of our approach in enhancing computer science education.
+                        </p>
+                    </details> 
+                </div>
+            </div>
+
+            <div class="publication">
+                <span class="year">2023</span>                    
+                <p class="title">CodeVisions: Static Code Analysis for Creating Education-Oriented Applications.</p>
+                <p class="authors"><auth>Zeyad Ahmed</auth>, Mostafa Mohammed</p>
+                <p class="venue">ACM SIGSE TS 2024</p>
+                <div class="desc">
+                    <p>
+                        <a href="https://doi.org/10.1145/3545947.3573276">DOI</a> |
+                        <a href="https://www.researchgate.net/profile/Zeyad-Ahmed-10/publication/369114848_CodeVisions_Static_Code_Analysis_for_Creating_Education-Oriented_Applications/links/6414a12a315dfb4cce89d979/CodeVisions-Static-Code-Analysis-for-Creating-Education-Oriented-Applications.pdf">Paper</a> |
+                        <a href="">Code</a>
+                    </p>
+                    <details>
+                        <summary>Abstract</summary>
+                        <p>
+                            Simplifying programming for novices and students is a goal for many computer science instructors over the world and an essential concern for computer science education in general. this paper we introduce CodeVisions, a static code analyzer and interpreter that provides testing and assessment mechanisms and generates a detailed trace of code execution. It’s intended to be used to facilitate creating programming tutoring or coding assessing applications (Such as visualizers and auto-graders) through a variety of supported programming languages and flexibility of restricting code inputs. CodeVisions has a testing mechanism that allows users to write their own tests to validate the dump to their rules instead of manually parse the dump themselves resulting a test report too.
+                        </p>
+                    </details> 
+            </div>
+
         </section>
 
         <section id="teaching" class="box">
             <h2>> Talks</h2>
             <ul>
-                <li>Learn How to Learn – Introductory Talk for CS Freshmen</li>
-                <li>Object-Oriented Programming – Undergraduate Course</li>
-                <li>Teamwork Skills – Computer Science Students Workshop</li>
+                <li>2024: Assiut Tech & Employment Forum - Speaker</li>
             </ul>
-        </section>
-
-        <section id="contact" class="box">
-            <h2>Contact <i class="fa-solid fa-envelope"></i></h2>
-            <p>Email: <a href="mailto:zeyad@example.com">zeyad@example.com</a></p>
-            <p>
-                <a href="https://scholar.google.com/" target="_blank"><i class="fa-brands fa-google"></i> Google Scholar</a> •
-                <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a> •
-                <a href="https://linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-            </p>
         </section>
     </div>
 
 
-    <!--
+    
     <footer>
-        <marquee direction="right" scrollamount="4">© 2025 Zeyad Ahmed — Powered by HTML, CSS & Nostalgia</marquee>
+        <marquee direction="left" scrollamount="20">© 2025 Zeyad Ahmed — Powered by HTML, CSS & Nostalgia</marquee>
     </footer>
-    -->
+    
     <script src="script.js"></script>
 </body>
 </html>

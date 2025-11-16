@@ -6,12 +6,13 @@
 }
 
 body {
-    background: url('https://sadhost.neocities.org/images/tiles/background.gif') repeat;
+    background: url('./assets/images/background.gif') repeat;
     font-family: 'IBM VGA8', monospace;
     color: #c9c8c8;
     margin: 0;
     padding: 0;
 }
+
 
 header {
     background: black;
@@ -45,6 +46,7 @@ nav a:hover {
     color: yellow;
     text-shadow: 0 0 5px yellow;
 }
+
 
 .box {
     background: rgba(0, 0, 0, 1);
@@ -80,26 +82,62 @@ h2 {
 }
 
 .time {
-    display: flex;   
+    display: flex;
     gap: 20px;
     margin: 20px;
-
     border-bottom: grey 2px dashed;
+    padding-bottom: 20px;
+    .prof{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
     img {
-        width: 10%;
-        height: 10%;
-        filter: drop-shadow(0 0 2px yellow);     
         transition: filter 0.5s ease-in-out; /* Animate the box-shadow */
     }
+
     img:hover{
-        filter: drop-shadow(0 0 10px yellow);     
+        filter: drop-shadow(0 0 10px yellow);    
     }
+
+    img.aun {
+        width: 80px;
+        height: 120px;
+        filter: drop-shadow(0 0 4px yellow);
+    }
+
+    img.aun:hover{
+        filter: drop-shadow(0 0 10px yellow);    
+    }
+    img.bua {
+        width: 150px;
+        height: 150px;
+        filter: drop-shadow(0 0 1px  rgb(0, 140, 255));     
+    }
+
+    img.bua:hover{
+        filter: drop-shadow(0 0 10px rgb(0, 140, 255));
+    }
+
+
+    img.voy {
+        width: 100px;
+        height: 100px;
+        filter: drop-shadow(0 0 1px  rgb(40, 44, 151));     
+    }
+
+    img.voy:hover{
+        filter: drop-shadow(0 0 20px rgb(40, 44, 151));
+    }
+
 
     .univ {
         margin: 3px;
         color: yellow;
     }
+
 
     .degree {
         margin: 3px;
@@ -116,6 +154,13 @@ h2 {
     .info {
         margin: 0px;
     }
+
+    .year{
+        background-color: blue;
+        color: yellow;
+        align-self: flex-end;
+        padding: 2px;
+    }
     a {
         color: #ff00ff;
         text-decoration: none;
@@ -125,37 +170,72 @@ h2 {
         text-shadow: 0 0 5px yellow;
     }
 
-    white {
-        color: white;
+
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 }
-.time .details{
+
+.white {
+        color: white;
+}
+.publication {
     display: flex;
     flex-direction: column;
+    margin: 20px;
+    border-bottom: grey 2px dashed;
+    
+    .title {
+        margin: 3px;
+        font-weight: bold;
+        font-size: large;
+        color: white;
+    }
+
+    .authors{
+        margin: 3px;
+    }
+
+    .venue{
+        margin: 3px;
+        color: #00ff00;
+    }
+
+    .year{
+        background-color: blue;
+        color: yellow;
+        align-self: flex-end;
+        padding: 2px;
+    }
+
+    auth {
+        color: white;
+    }
+
+    details {
+        margin-bottom: 10px;
+    }
+    summary{
+        color: yellow;
+        text-shadow: 0 0 5px white;
+        cursor: pointer;
+    }
+
+
 }
 
-.timeline {
-    list-style: none;
-}
+    a {
+        color: #ff00ff;
+        text-decoration: none;
+    }
+    a:hover{
+        color: yellow;
+        text-shadow: 0 0 5px yellow;
+    }
 
-.timeline li {
-    display: flex;
-    margin-bottom: 10px;
-}
-
-.timeline .date {
-    min-width: 120px;
-    font-weight: bold;
-    color: yellow;
-}
-
-a {
-    color: #ff00ff;
-}
-
-a:hover {
-    color: #ffff00;
-}
 
 footer {
     background: black;
@@ -163,4 +243,22 @@ footer {
     text-align: center;
     border-top: 3px solid #00ff00;
     color: #00ff00;
+}
+
+
+em {
+    color: white;
+    text-shadow: 0 0 5px white;
+    font-style: normal;
+}
+
+@media (max-width: 600px) {
+    .profile, .time {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile img, .time img {
+        margin: 0 auto;
+    }
 }
