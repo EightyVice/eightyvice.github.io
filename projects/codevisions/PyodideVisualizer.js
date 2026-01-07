@@ -186,7 +186,7 @@ finally:
     sys.settrace(None)
 `;
 
-        //console.log(await this.pyodide.runPythonAsync(tracerPythonCode));
+        console.log(await this.pyodide.runPythonAsync(tracerPythonCode));
 
         this.canVisualize = true;
         this.snapCounter = 0;
@@ -531,7 +531,7 @@ finally:
     renderSnap(snap) {
         this.initVisualization();
         document.getElementById("stepCounter").innerText = `Step ${this.snapCounter + 1} of ${this.envSnaps.length}`;
-        //console.log(snap);
+        console.log(snap);
         this.slider.value = this.snapCounter;
         this.snapCounter = parseInt(this.slider.value);
 
