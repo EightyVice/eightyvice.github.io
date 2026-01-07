@@ -186,7 +186,7 @@ finally:
     sys.settrace(None)
 `;
 
-        console.log(await this.pyodide.runPythonAsync(tracerPythonCode));
+        await this.pyodide.runPythonAsync(tracerPythonCode);
 
         this.canVisualize = true;
         this.snapCounter = 0;
