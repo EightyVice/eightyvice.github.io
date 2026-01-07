@@ -1,0 +1,211 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+
+#editor {
+    height: 300px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+fieldset {
+    border: 1px solid #aaa;
+    padding: 12px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#visualizeBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#visualizeBtn:hover {
+    background-color: #45a049;
+}
+
+#visualizeBtn:active {
+    background-color: #265729;  
+}
+
+#container {
+    width: 98%;
+    position: relative;
+}
+
+select, label {
+    font-size: 16px;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+
+.jsavcounter {
+    position: absolute;
+    top: 15px;
+}
+
+.jsavcanvas { height: 150px; }
+
+#viz{
+    font-family: 'Consolas', monospace;
+    border: 1px solid #ccc;
+    height: 500px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    min-width: max-content;
+    min-height: max-content;
+}
+
+#visualArea {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+}
+
+#controls {
+    align-self: center;
+    border:#4CAF50 2px solid;
+    border-radius: 10px;
+    padding: 10px; 
+    background-color: wheat;
+}
+
+#controls button {
+    border-radius: 10px;
+    width: 50px;
+    height: 30px;
+}
+
+#controls button:hover {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+#controls button:active{
+    background-color: #265729;  
+}
+
+#vizMsg {
+    margin: 10px;
+}
+ 
+#stackTable {
+    width: 40px;
+    border: black 2px solid;
+    text-align: center;
+    min-width: 150px;
+    margin: 10px;
+
+}
+
+#stackArea {
+    margin: 20px;
+    background-color: rgba(252, 167, 9, 0.466);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#heapArea {
+    background-color: rgba(117, 198, 241, 0.466);
+    width: 100%;
+    margin: 20px;
+    min-width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#outputArea {
+    margin: 20px;
+    background-color: rgba(156, 149, 160, 0.486);
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.vizObj {
+    border: black 2px solid;
+    text-align: center;
+    margin: 10px;
+    min-width: 25px;
+    min-height: 25px;   
+}
+
+
+.vizObj td {
+    background-color: white;
+    min-width: 25px;
+    min-height: 25px;
+    padding: 3px;
+}
+
+.vizObj td:hover {
+    background-color: #d6eeee;
+}
+
+
+#stackTable th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#stackTable tr {
+    border: black 1px solid;
+    background-color: white;
+}
+
+#stackTable td {
+    min-width: 5px;
+}
+
+#stackTable tr:hover {
+    background-color: #d6eeee;
+}
+
+.myMarker {
+  position:absolute;
+  background:rgba(100,200,100,0.5);
+  z-index:20
+}
+
+#vizOutput {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 400px;
+    overflow-y: auto;
+    font-family: 'Consolas', monospace;
+    min-height: 100px;
+}
+
+#vizMain {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>CodeVisions: Visualizing Code Execution</title>
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- OpenGraph Info -->
+  <meta property="og:title" content="CodeVisions: Visualizing Code Execution" />
+  <meta property="og:description" content="A client-side code visualization tool." />
+  <meta property="og:image" content="./cv.png" />
+
+  <link rel="icon" type="image/png" href="./cv.png" />
+
+  <!-- JSAV -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.43.2/ace.js"></script>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.29.0/full/pyodide.js"></script>
+
+  <script type="module" src="./main.js"></script>
+
+  <style>
+
+  </style>
+
+  <!-- Ace Editor -->
+
+
+</head>
+
+<body>
+
+
+  <div id="loadingOverlay" style="
+    position: fixed;
+    top:0; left:0; width:100%; height:100%;
+    background-color: rgba(0,0,0,0.5);
+    color: white; font-size: 2em;
+    display: flex; justify-content: center; align-items: center;
+    z-index: 1000;
+">
+    Loading Python environment...
+  </div>
+  <h1>CodeVisions</h1>
+  <p>A client-side code visualization tool.</p>
+  <!-- Layout Grid -->
+  <div class="layout">
+    <!-- Code Editor -->
+    <div>
+      <div id="editor">
+
+      </div>
+    </div>
+
+    <!-- Options Panel -->
+    <div>
+      <fieldset>
+        <legend>Options</legend>
+        <label for="language">Language:</label>
+        <select id="language">
+          <option value="python">Python</option>
+          <option value="java" onselect="alert('Not ready yet')">Java</option>
+          <option value="cpp" onselect="alert('Not ready yet')" >C/C++</option>
+        </select>
+
+        <label for="examples">Examples:</label>
+        <select id="examples">
+          <option value="">-- Select an Example --</option>
+          <optgroup label="Basics">
+            <option value="sumOfArray">Sum of Array</option>
+            <option value="minMax">Min & Max</option>
+            <option value="listMut">List Mutation</option>
+          </optgroup>
+          <optgroup label="Data Structures">
+            <option value="freqMap">Frequency Map</option>
+            <option value="llistTraverse">Linked List Traversal</option>
+          </optgroup>
+          <optgroup label="Object-Oriented Programming">
+            <option value="objects">Object State and Method</option>
+            <option value="nestedObjects">Nested Objects</option>
+          </optgroup>
+        </select>
+        <button id="visualizeBtn">Visualize</button>
+      </fieldset>
+    </div>
+  </div>
+
+
+
+  <div id="viz">
+    <div id="controls">
+      <button id="firstStepBtn">◀◀</button>
+      <button id="prevStepBtn">◀</button>
+      <button id="nextStepBtn">▶</button>
+      <button id="lastStepBtn">▶▶</button>
+      <span id="stepCounter">Step 0 of 0</span>
+      <input type="range" id="stepSlider" min="0" max="0" value="0"/>
+    </div>
+
+
+    <div id="vizMsg"></div>
+
+    <div id="vizMain">
+
+      <div id="visualArea">
+        <div id="vizCode">
+
+        </div>
+        <div id="stackArea">
+          <h3>Stack</h3>
+          <table id="stackTable">
+          </table>
+        </div>
+        <div id="heapArea">
+          <h3>Heap</h3>
+
+        </div>
+        <div id="outputArea">
+          <h3>Output</h3>
+          <div id="vizOutput"></div>
+        </div>
+        <div id="vizArea">
+
+        </div>
+
+        <svg id="arrowLayer" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none;">
+
+        </svg>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+  <footer>
+      <!-- <p>CodeVisions &copy; 2025-2026 <a target="_blank" href="https://eightyvice.github.io">Zeyad Ahmed</a></p> -->
+      <p style="font-size: smaller;">The project is an extention to the paper: <strong><a href="https://eightyvice.github.io">Zeyad Ahmed</a></strong> and <strong>Mostafa Mohammed</strong>. 2023. CodeVisions: Static Code Analysis for Creating Education-Oriented Applications. In Proceedings of the 54th ACM Technical Symposium on Computer Science Education V. 2 (SIGCSE 2023) <a href="https://doi.org/10.1145/3545947.3573276">https://doi.org/10.1145/3545947.3573276</a></p>
+  </footer>
+
+  <!--
+  <div id="container">
+    <div class="jsavcontrols"></div><span class="jsavcounter"></span>
+    <p class="jsavoutput jsavline"></p>
+    <div class="jsavcanvas"></div>
+  </div>
+-->
+  <script>
+
+  </script>
+
+  <script type="module" src="main.js"></script>
+
+
+</body>
+
+</html>
