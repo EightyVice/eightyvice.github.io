@@ -1,0 +1,142 @@
+.window {
+    max-width: 800px;
+    margin: 5px auto;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.center {
+}
+
+.title-bar {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.window {
+  position: absolute;
+  max-width: 400px;
+  min-width: 400px;
+}
+
+.window-body{
+    max-height: 500px;
+    overflow-y: auto;
+}
+.edu-item {
+    display: flex;
+    border-bottom: grey 1px solid;
+    flex-direction: row;
+    margin: 10px;
+    padding: 5px;
+    width: 100%;
+    .univ {
+        font-size: 1.2em;
+        font-weight: bold;
+        display: flex;
+        .year {
+            margin-left: auto;
+        }
+    }
+
+    .univ-logo{
+        width: 60px;
+        height: fit-content;
+        margin-right: 10px;
+    }
+}
+
+.taskbar {
+    z-index: 9999;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(rgb(31, 47, 134) 0px, rgb(49, 101, 196) 3%, rgb(54, 130, 229) 6%, rgb(68, 144, 230) 10%, rgb(56, 131, 229) 12%, rgb(43, 113, 224) 15%, rgb(38, 99, 218) 18%, rgb(35, 91, 214) 20%, rgb(34, 88, 213) 23%, rgb(33, 87, 214) 38%, rgb(36, 93, 219) 54%, rgb(37, 98, 223) 86%, rgb(36, 95, 220) 89%, rgb(33, 88, 212) 92%, rgb(29, 78, 192) 95%, rgb(25, 65, 165) 98%);
+    display:flex;
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+}
+
+.taskbar-item {
+    flex: 1 1 0%;
+    max-width: 150px;
+    color: rgb(255, 255, 255);
+    border-radius: 2px;
+    margin-top: 2px;
+    padding: 0px 8px;
+    height: 22px;
+    font-size: 11px;
+    background-color: rgb(60, 129, 243);
+    box-shadow: rgba(0, 0, 0, 0.3) -1px 0px inset, rgba(255, 255, 255, 0.2) 1px 1px 1px inset;
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.start-button {
+    flex-direction: row;
+    display: flex;
+    color: rgb(255, 255, 255);
+    border-radius: 0px 10px 10px 0px;
+    width: 70px;
+    padding: 0px 8px;
+    height: 100%;
+    font-size: 11px;
+    background-color: rgba(54, 233, 9, 0.637);
+    box-shadow: rgba(0, 0, 0, 0.3) -1px 0px inset, rgba(255, 255, 255, 0.2) 1px 1px 1px inset;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-right: 10px;
+}
+
+.start-button:hover {
+    background-color: rgb(67, 212, 67);
+    box-shadow: rgba(0, 0, 0, 0.3) -1px 0px inset, rgba(255, 255, 255, 0.4) 1px 1px 2px inset;
+}
+.start-button:active {
+    background-color: rgb(30, 183, 30);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px inset, rgba(0, 0, 0, 0.7) 1px 0px 1px inset;
+}
+
+.taskbar-item:hover {
+    background-color: rgb(80, 149, 255);
+    box-shadow: rgba(0, 0, 0, 0.3) -1px 0px inset, rgba(255, 255, 255, 0.4) 1px 1px 2px inset;
+}
+
+.taskbar-item:active {
+    background-color: rgb(30, 82, 183);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px inset, rgba(0, 0, 0, 0.7) 1px 0px 1px inset;
+}
+
+.taskbar-clock{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(rgb(12, 89, 185) 1%, rgb(19, 158, 233) 6%, rgb(24, 181, 242) 10%, rgb(19, 155, 235) 14%, rgb(18, 144, 232) 19%, rgb(13, 141, 234) 63%, rgb(13, 159, 241) 81%, rgb(15, 158, 237) 88%, rgb(17, 155, 233) 91%, rgb(19, 146, 226) 94%, rgb(19, 126, 215) 97%, rgb(9, 91, 201) 100%);
+    border-left: 1px solid rgb(16, 66, 175);
+    box-shadow: rgb(24, 187, 255) 1px 0px 1px inset;
+    padding: 0px 10px;
+    margin-left: 10px;
+    color: rgb(255, 255, 255);
+    align-content: center;
+    height: 100%;
+    margin-left: auto;
+}
+
+.marq{
+margin-top: 15px;
+}
+
